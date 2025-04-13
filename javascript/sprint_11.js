@@ -154,12 +154,16 @@ obj_10.step();
 console.log(obj_10.showCount());
 // Task 11
 // Теперь наследуйтесь от Test_10 и создайте класс Test_11. В нем создайте step5() метод, который увеличивает _count на 5.
-// тут пишем класс
+class Test_11 extends Test_10 {
+    step5() {
+        return this._count += 5;
+    }
+}
 // Для проверки кода снимите комментарий ниже
-// const obj_11 = new Test_11(505);
-// obj_11.step5();
-// obj_11.step5();
-// console.log(obj_11.showCount());
+const obj_11 = new Test_11(505);
+obj_11.step5();
+obj_11.step5();
+console.log(obj_11.showCount());
 // обратите внимание, напрямую оперировать в классе наследнике со свойством private не получилось бы
 // а вот protected позволяет в классе наследнике манипулировать protected напрямую.
 // Task 12
