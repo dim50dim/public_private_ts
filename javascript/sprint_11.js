@@ -124,12 +124,13 @@ obj_08.step();
 console.log(obj_08.showCount());
 // Task 09
 // Создайте класс Test_09 наследник класса Test_08. Запустите код для проверки. Сделайте выводы.
-// тут пишем класс
+class Test_09 extends Test_08 {
+}
 // Для проверки кода снимите комментарий ниже
-// const obj_09 = new Test_09(100);
-// obj_09.step();
-// obj_09.step();
-// console.log(obj_09.showCount());
+const obj_09 = new Test_09(100);
+obj_09.step();
+obj_09.step();
+console.log(obj_09.showCount());
 // Task 10
 // Давайте теперь проделаем то же, но с protected. Создайте класс Test_10, задайте ему protected свойство _count - число. Напишем метод step(), который увеличивает _count на единицу. Напишем метод showCount, который возвращает _count. Напишите в классе конструктор, который задает начальное значение _count из аргумента.
 // тут пишем класс
