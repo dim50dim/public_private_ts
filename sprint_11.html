@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Sprint 11. Public, protected, private TS</title>
+  <meta name="author" content="itgid.info">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- <link rel="stylesheet" href="css/night.css"> -->
+  <link rel="icon" type="image/svg+xml" href="https://itgid.info/favicon.svg">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="one-column">
+        <h1>TypeScript. Sprint 11</h1>
+        <h2>Public, protected, private в TS</h2>
+        <p>course <a href="https://itgid.info">itgid.info</a></p>
+
+        <p>Для применения темы "ночь" удалите комментарий с night.css. </p>
+        <p>Условие: везде где не сказано о способе задания типа данных - тип задается явно.</p>
+
+        <section>
+          <h3>Task 01</h3>
+          <p>Создан класс Test_00, изучите код ниже и разберитесь, почему есть баг между ожидаемым результатом и полученным.</p>
+        </section>
+
+        <section>
+          <h3>Task 02</h3>
+          <p>Давайте напишем копию класса Test_00, т.е. создадим класс Test_01 в него скопируем код из Test_00 и заменим public на private.</p>
+        </section>
+
+        <section>
+          <h3>Task 03</h3>
+          <p>Создайте класс Test_03, который содержит приватное свойство _taxIndex - массив чисел [0.05, 0.21] и приватное свойство _isResident по умолчанию равное true. И свойство приватное _cost - число, равное нулю. Создайте конструктор, который принимает свойство isResident и сost в указанном порядке. Напишите метод taxSum, который  возвращает т сумму налога с  указанной _cost. Для резидента используется коєффициент 0.05 из массива, для не резидента - 0.21.</p>
+        </section>
+
+        <section>
+          <h3>Task 04</h3>
+          <p>Итак, мы выяснили зачем нужны priave свойства. Давайте закрепим. Private свойства доступны только внутри класса где они объявлены. Проверим. Создайте класс Test_04 содержащий private свойство _n - число равное 200 и метод showN () в котором делается return this._n. Запустите проверку.</p>
+        </section>
+
+        <section>
+          <h3>Task 05</h3>
+          <p>Посмотрим как private свойство ведет себя в наследуемых классах. Снимите комментарий с класса Test_05. Изучите ошибку... Ошибка возникает потому что приватное свойство видно только в классе где объявлено.</p>
+
+        </section>
+
+        <section>
+          <h3>Task 06</h3>
+          <p>Давайте изучим как работает protected свойства. Как гласит теория, protected свойство доступно как внутри класса, так и в наследуемых классах. Создайте класс Test_06 содержащий protected свойство _n - число равное 200 и метод showN () в котором делается return this._n. Запустите проверку.</p>
+        </section>
+
+        <section>
+          <h3>Task 07</h3>
+          <p>Напишите класс Test_07, наследующийся от Test_06. Класс Test_07  содержит метод showN2, возвращающий this._n./p>
+        </section>
+
+        <section>
+          <h3>Task 08</h3>
+          <p>Теперь давайте поработаем с конструктором. Создайте класс Test_08, задайте ему private свойство _count - число. Напишем метод step(), который увеличивает _count на единицу. Напишем метод showCount, который возвращает _count. Напишите в классе конструктор, который задает начальное значение _count из аргумента.</p>
+        </section>
+
+        <section>
+          <h3>Task 09</h3>
+          <p>Создайте класс Test_09 наследник класса Test_08. Запустите код для проверки. Сделайте выводы.</p>
+        </section>
+
+        <section>
+          <h3>Task 10</h3>
+          <p>Давайте теперь проделаем то же, но с protected.Создайте класс Test_10, задайте ему protected свойство _count - число. Напишем метод step(), который увеличивает _count на единицу. Напишем метод showCount, который возвращает _count. Напишите в классе конструктор, который задает начальное значение _count из аргумента.</p>
+        </section>
+
+
+        <section>
+          <h3>Task 11</h3>
+          <p>Теперь наследуйтесь от Test_10 и создайте класс Test_11. В нем создайте step5() метод, который увеличивает _count на 5.</p>
+        </section>
+
+        <section>
+          <h3>Task 12</h3>
+          <p>Создайте класс Test_12, содержащий свойство public n число равное нулю. Создайте метод rand, private, который присваивает свойству n случайное число от 0 до 100. Запускайте данный метод в конструкторе.</p>
+        </section>
+
+        <section>
+          <h3>Task 13</h3>
+          <p>Снимите комментарий с класса Test_13 - здесь мы в классе наследнике пытаемся обратиться к private методу. И получаем ошибку. Изучите ошибку. Закомментируйте класс обратно.</p>
+
+        </section>
+
+        <section>
+          <h3>Task 14</h3>
+          <p>Проделаем то же с protected. Есть класс Test_14. Создайте класс Test_141, который наследуется от класса Test_14. Реализуйте в нем метод test(), который реализует код:</p>
+          <pre><code>this.rand()
+return this.n;</code></pre>
+        </section>
+
+        <section>
+          <h3>Task 15</h3>
+          <p>Создайте класс Test_15 содержащий свойства private num1 и protected num2. С помощью конструктора заполните данные числа. Напишите метод isBig() возвращающий большее из двух чисел.</p>
+
+
+        </section>
+
+      </div>
+
+      <div class="one-column">
+        <footer>
+          <p>Курсы Itgid.info</p>
+          <p><a href="https://itgid.info/ru/course/js20">javascript 2.0</a> | <a
+              href="https://itgid.info/ru/course/arraymethod">Методы массивов JavaScript</a> | <a
+              href="https://itgid.info/ru/course/function-2021">Функции JavaScript</a> | <a
+              href="https://itgid.info/ru/course/reactjs">ReactJS</a></p>
+        </footer>
+      </div>
+    </div>
+  </div>
+
+  <script src="./javascript/sprint_11.js"></script>
+</body>
+
+</html>
