@@ -93,35 +93,45 @@ console.log(obj_04.showN()); // покажет результат
 
 // тут пишем класс
    
-class Test_05 extends Test_04 {
-    showN2 () : number {
-        return 300 + this._n;
-    }
-}
+// class Test_05 extends Test_04 {
+//     showN2 () : number {
+//         return 300 + this._n;
+//     }
+// }
 
 // Task 06
 // Давайте изучим как работает protected свойства. Как гласит теория, protected свойство доступно как внутри класса, так и в наследуемых классах. Создайте класс Test_06 содержащий protected свойство _n - число равное 200 и метод showN () в котором делается return this._n. Запустите проверку.
 
 // тут пишем класс
+class Test_06 {
+    protected _n :number = 200;
 
+      showN() : number {
+        return this._n;
+      }
+}
 
 // Для проверки кода снимите комментарий ниже
-// const obj_06 = new Test_06();
+const obj_06 = new Test_06();
 // console.log(obj_04._n); // приводит к ошибке
-// console.log(obj_06.showN()); // покажет результат
+console.log(obj_06.showN()); // покажет результат
 // как видите здесь в поведении нет различий между private и protected
 
 // Task 7. 
 // Напишите класс Test_07, наследующийся от Test_06. Класс Test_07  содержит метод showN2, возвращающий this._n. 
-
+class Test_07 extends Test_06{
+    showN2(): number {
+       return this._n;
+    }
+}
 // тут пишем класс
 
 
 // Для проверки кода снимите комментарий ниже
-// const obj_07 = new Test_07();
+const obj_07 = new Test_07();
 // console.log(obj_07._n); // приводит к ошибке
-// console.log(obj_07.showN()); // покажет результат
-// console.log(obj_07.showN2()); // покажет результат
+console.log(obj_07.showN()); // покажет результат
+console.log(obj_07.showN2()); // покажет результат
 // как видите здесь и есть вся соль отличия private и protected. Protected доступен в классах наследниках (внутри класса);
 
 // Task 08
