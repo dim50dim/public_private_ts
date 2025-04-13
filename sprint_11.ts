@@ -42,7 +42,7 @@ class Test_01 {
 const obj_02 = new Test_01(5); 
 // теперь попытка изменить n напрямую приведет к ошибке. Убедитесь в этом:
 //  obj_02.n = 10;
-console.log(obj_01.isEven()); 
+console.log(obj_02.isEven()); 
 
 
 
