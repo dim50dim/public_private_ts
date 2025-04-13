@@ -172,16 +172,27 @@ console.log(obj_09.showCount());
 // Task 10
 // Давайте теперь проделаем то же, но с protected. Создайте класс Test_10, задайте ему protected свойство _count - число. Напишем метод step(), который увеличивает _count на единицу. Напишем метод showCount, который возвращает _count. Напишите в классе конструктор, который задает начальное значение _count из аргумента.
 
-
+class Test_10{
+    protected _count: number;
+    constructor(_count:number){
+        this._count = _count;
+    }
+    step():number {
+        return this._count++;
+    }
+    showCount() : number {
+        return this._count;
+    }
+}
 // тут пишем класс
 
 
 // Для проверки кода снимите комментарий ниже
-// const obj_10 = new Test_10(205);
-// obj_10.step();
-// obj_10.step();
-// obj_10.step();
-// console.log(obj_10.showCount());
+const obj_10 = new Test_10(205);
+obj_10.step();
+obj_10.step();
+obj_10.step();
+console.log(obj_10.showCount());
 
 // Task 11
 // Теперь наследуйтесь от Test_10 и создайте класс Test_11. В нем создайте step5() метод, который увеличивает _count на 5.
