@@ -25,13 +25,24 @@ console.log(obj_01.isEven());
 // Давайте напишем копию класса Test_00, т.е. создадим класс Test_01 в него скопируем код из Test_00 и заменим public на private. 
 
 // тут создаем Test_01
-
+class Test_01 {
+    private n: number;
+  
+    constructor(a: number) {
+      this.n = a;
+    }
+  
+    isEven(): boolean {
+      return this.n % 2 === 0;
+    }
+  }
+  
 
 // проверяем
-// const obj_02 = new Test_01(5); 
+const obj_02 = new Test_01(5); 
 // теперь попытка изменить n напрямую приведет к ошибке. Убедитесь в этом:
-// obj_02.n = 10;
-// console.log(obj_01.isEven()); 
+//  obj_02.n = 10;
+console.log(obj_01.isEven()); 
 
 
 
