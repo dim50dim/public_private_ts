@@ -50,22 +50,43 @@ console.log(obj_02.isEven());
 // Создайте класс Test_03, который содержит приватное свойство _taxIndex - массив чисел [0.05, 0.21] и приватное свойство _isResident по умолчанию равное true. И свойство приватное _cost - число, равное нулю. Создайте конструктор, который принимает свойство isResident и сost в указанном порядке. Напишите метод taxSum, который  возвращает т сумму налога с  указанной _cost. Для резидента используется коєффициент 0.05 из массива, для не резидента - 0.21. 
 
 // тут пишем класс
+class Test_03{
+    private _taxIndex: number[] = [0.05,0.21];
+    private _isResident : boolean = true;
+    private _cost : number = 0;
 
+      constructor(_isResident: boolean, _cost : number) {
+          this._isResident = _isResident;
+          this._cost = _cost;
+      }
+
+      taxSum() : number {
+        if(this._isResident) return  this._taxIndex[0] * this._cost;
+        else return this._taxIndex[1] * this._cost;
+        
+      }
+}
 
 
 // Для проверки кода снимите комментарий ниже
-// const obj_03 = new Test_03(true, 1000);
-// console.log(obj_03.taxSum()); // ожидаю 50
+const obj_03 = new Test_03(true, 1000);
+console.log(obj_03.taxSum()); // ожидаю 50
 
 // Task 04
 // Итак, мы выяснили зачем нужны private свойства. Давайте закрепим. Private свойства доступны только внутри класса где они объявлены. Проверим. Создайте класс Test_04 содержащий private свойство _n - число равное 200 и метод showN () в котором делается return this._n. Запустите проверку.
 
-// тут пишем класс
+class Test_04{
+    private _n : number = 200;
+
+      showN() : number {
+        return this._n;
+      }
+}
 
 // Для проверки кода снимите комментарий ниже
-// const obj_04 = new Test_04();
+const obj_04 = new Test_04();
 // console.log(obj_04._n); // приводит к ошибке
-// console.log(obj_04.showN()); // покажет результат
+console.log(obj_04.showN()); // покажет результат
 
 // Task 05
 // Посмотрим как private свойство ведет себя в наследуемых классах. Снимите комментарий с класса Test_05. Изучите ошибку... Ошибка возникает потому что приватное свойство видно только в классе где объявлено. 
