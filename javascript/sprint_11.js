@@ -175,6 +175,7 @@ class Test_12 {
     }
     rand() {
         this.n = Math.floor(Math.random() * 101);
+        return this.n;
     }
 }
 // тут пишем класс

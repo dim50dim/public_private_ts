@@ -220,9 +220,9 @@ class Test_12{
     constructor() {
         this.rand();
     }
-    private rand() : void{
+    private rand() : number{
         this.n = Math.floor(Math.random() * 101);
-        
+        return this.n;
     }
     
 }
