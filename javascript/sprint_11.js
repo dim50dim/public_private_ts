@@ -207,10 +207,15 @@ class Test_14 {
         this.rand();
     }
 }
-// тут пишем класс
+class Test_141 extends Test_14 {
+    test() {
+        this.rand();
+        return this.n;
+    }
+}
 // Для проверки кода снимите комментарий ниже
-// const obj_14 = new Test_141();
-// console.log(obj_14.test());
+const obj_14 = new Test_141();
+console.log(obj_14.test());
 // Task 15
 // Создайте класс Test_15 содержащий свойства private num1 и protected num2. С помощью конструктора заполните данные числа. Напишите метод isBig() возвращающий большее из двух чисел. 
 // тут пишем класс

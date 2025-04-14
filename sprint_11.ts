@@ -238,14 +238,14 @@ console.log(obj_12.n);
 // Task 13
 // Снимите комментарий с класса Test_13 - здесь мы в классе наследнике пытаемся обратиться к private методу. И получаем ошибку. Изучите ошибку. Закомментируйте класс обратно.
 
-class Test_13 extends Test_12 {
-    constructor () {
-        super();
-    }
-    test () : void {
-        this.rand();
-    }
-}
+// class Test_13 extends Test_12 {
+//     constructor () {
+//         super();
+//     }
+//     test () : void {
+//         this.rand();
+//     }
+// }
 
 
 // Task 14
@@ -263,11 +263,16 @@ class Test_14 {
     }
 }
 
-// тут пишем класс
+class Test_141 extends Test_14{
+    test() : number{
+        this.rand();
+        return this.n;
+    }
+}
 
 // Для проверки кода снимите комментарий ниже
-// const obj_14 = new Test_141();
-// console.log(obj_14.test());
+const obj_14 = new Test_141();
+console.log(obj_14.test());
 
 
 // Task 15
