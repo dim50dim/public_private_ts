@@ -215,12 +215,22 @@ console.log(obj_11.showCount());
 
 // Task 12
 // Создайте класс Test_12, содержащий свойство public n число равное нулю. Создайте метод rand, private, который присваивает свойству n случайное число от 0 до 100. Запускайте данный метод в конструкторе.
-
+class Test_12{
+    public n : number = 0;
+    constructor() {
+        this.rand();
+    }
+    private rand() : void{
+        this.n = Math.floor(Math.random() * 101);
+        
+    }
+    
+}
 // тут пишем класс
 
 // Для проверки кода снимите комментарий ниже
-// const obj_12 = new Test_12();
-// console.log(obj_12.n);
+const obj_12 = new Test_12();
+console.log(obj_12.n);
 // а вот такой запуск выдаст ошибку
 // obj_12.rand();
 
